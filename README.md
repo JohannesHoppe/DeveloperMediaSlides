@@ -1,6 +1,5 @@
 ![Logo](https://raw.github.com/JohannesHoppe/DeveloperMediaSlides/master/images/logo_big.png)
-# Knockout.js
-## für .NET Entwickler
+# Knockout.js für .NET Entwickler
 
 #[&nbsp;&nbsp;&nbsp;&raquo; Start the presentation](http://johanneshoppe.github.com/DeveloperMediaSlides/)
 
