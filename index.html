@@ -6,7 +6,7 @@
 
         <title>HTML5 & JavaScript Security</title>
 
-        <meta name="description" content="HTML5Security">
+        <meta name="description" content="DeveloperMediaSlides">
         <meta name="author" content="Johannes Hoppe">
         
         <link rel="shortcut icon" href="images/favicon.ico" >
@@ -17,7 +17,7 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <link rel="stylesheet" href="css/reveal.min.css">
-        <link rel="stylesheet" href="css/theme/yellowJS.css" id="theme">
+        <link rel="stylesheet" href="css/theme/developerMedia.css" id="theme">
         <link rel="stylesheet" href="css/custom.css">
 
         <!-- For syntax highlighting -->
@@ -42,410 +42,77 @@
 
                 <section>
                     <img src="images/logo_big.png" width="75%" style=""/>
-                    <h1 class="nowrap" style="font-size: 2.5em;">&nbsp;Security</h1>
-                    <br />
+                    <h1 class="nowrap" style="font-size: 2.5em;">&nbsp;Knockout.js</h1>
+                    <br />          
                     <br />
                     <small class="hidePrint">Navigation mit <span class="key">Esc</span>, <span class="key">→</span> und <span class="key">↓</span></small>
-                </section>             
+                </section>
                 
                 <section data-markdown>
-                    # Ziel
-                    
-                    Angriffsvektoren aufzeigen.  
-                    Strategien besprechen.  
-                    Mehr nicht!
+                    ![tools](images/johannes.png)
+                     
+                    ### [JohannesHoppe.de](http://www.johanneshoppe.de/)
                 </section>
+                
+                <section data-markdown>
+                    # 1. Teil
                     
+                    Tools  
+                    Projektaufbau  
+                    Knockout Bindings  
+                    Etwas require.js & Web Api  
+                </section> 
+
                 <section>
                     <section data-markdown>
-                        # Features
-                        <small>Neue Angriffsvektoren</small>
+                        # Tools
                         
                         ![tools](images/icon_tool.png)
-                    </section>
-                                 
-                    <section data-markdown class="example_formaction">
-                        ## Ein Formular
-
-                        <div data-insert-source="examples/formaction/clean.html"></div>
-                        
-                        ```javascript contenteditable data-show-source="examples/formaction/clean.html"
-                        loading source...
-                        ```
-                    </section> 
-
-                    <section data-markdown class="example_formaction">
-                        ## Formaction
-                         
-                        <div data-insert-source="examples/formaction/index.html"></div>
-                        
-                        ```javascript contenteditable data-show-source="examples/formaction/index.html"
-                        loading source...
-                        ```
-                    </section>
+                    </section>   
                     
-                    <section data-markdown>
-                        ## SVG
-                        <small>Presto, WebKit, Gecko und sogar Trident 9</small>
-                         
-                        <img src="examples/svg/smilie.svg" style="width:100px;height:100px;">
-
-                        ```javascript contenteditable data-show-source="examples/svg/smilie.svg"
-                        loading source...
-                        ```
+                    <section  data-markdown>
+                        * Visual Studio 2010/2012
+                        * [JScript Editor Extensions](http://visualstudiogallery.msdn.microsoft.com/872d27ee-38c7-4a97-98dc-0d8a431cc2ed)
+                        * [Resharper 7.1](http://www.jetbrains.com/resharper/whatsnew/#javascript)
+                        * [JSHint](http://www.jshint.com/platforms/)
+                        * [Chutzpah](http://chutzpah.codeplex.com/)
+                        * [Firebug](https://getfirebug.com/) / F12
                     </section>
-                    
-                    <section data-markdown>
-                        ## SVG
-                        <small>kann JavaScript enthalten!</small>
-                         
-                        <a href="examples/svg/sad_smilie.svg">
-                            <img src="examples/svg/sad_smilie.svg" style="width:440px;height:140px;margin:0;margin-left:37%">
-                        </a>
-
-                        ```html contenteditable data-show-source="examples/svg/sad_smilie.svg" small
-                        loading source...
-                        ```
-                    </section> 
-                    
-                    <section data-markdown class="example_formaction">
-                        ## Business as usual
-                        <small>HTML5 es ist auch nicht schlimmer als HTML 4</small>
-                                     
-                        <br />
-                        <small>[&raquo; http://html5sec.org](http://html5sec.org)</small>
-                    </section>
-
                 </section>
                 
-                
                 <section>
                     
                     <section data-markdown>
-                        # XSS
-                        <small>Eingeschleuster JavaScript-Code</small>
-                        
-                        ![tools](images/icon_bug.png)
-                    </section>
-                
-                    <section data-markdown>
-                        ## Oldies but Goldies
-                         
-                        <a href="examples/XSS-DOM-based/index.html?message=Daten%20gespeichert" target="XSS-DOM-based" class="fragment">index.html<red>?message=Daten gespeichert &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</red></a>  
-                        <a href="examples/XSS-DOM-based/index.html?message=&lt;script&gt;alert('XSS')&lt;/script&gt;" target="XSS-DOM-based" class="fragment">index.html<red>?message=&lt;script&gt;alert('XSS')&lt;/script&gt;</red></a>  
-                        
-                        ```javascript contenteditable data-show-source="examples/XSS-DOM-based/index.html"
-                        loading source...
-                        ```
-                             
-                        <iframe name="XSS-DOM-based" src="examples/XSS-DOM-based/index.html" style="width:100px;height:100px;"></iframe>
-                    </section>  
-                    
-                    <section data-markdown>
-                        ## Eval everywhere
-                        <small>Eval is evil</small>
-                                               
-                        ```html contenteditable data-show-source="examples/new-xss-vectors/onfocus.html"
-                        loading source...
-                        ```   
-                        
-                        ```html contenteditable data-show-source="examples/new-xss-vectors/onerror.html"
-                        loading source...
-                        ```
-                        
-                        ```html contenteditable data-show-source="examples/new-xss-vectors/onforminput.html"
-                        loading source...
-                        ```
-
-                        <small>&raquo; Demo
-                        [1](examples/new-xss-vectors/onfocus.html)
-                        [2](a href="examples/new-xss-vectors/onerror.html)
-                        [3](examples/new-xss-vectors/onforminput.html)
-                        </small>
-                    </section>  
-
-                    <section data-markdown>
-                        # OWASP
-                        #### Open Web Application Security Project 
-                        <small><a href="https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet">XSS Filter Evasion Cheat Sheet</a></small>
-                        
-                        ```html contenteditable data-show-source="examples/unicode-xss/index.html"
-                        loading source...
-                        ```
-                        
-                        <small>[&raquo; Old IE Demo](examples/unicode-xss/index.html)</small>
-                    </section>  
-                    
-                    <section data-markdown>
-                        ## XSS Vorbeugen
-                    </section>
-                    
-                    <section data-markdown>
-                        # 1.
-                        Hier sollten dynamische  
-                        Daten niemals verwendet werden
-                        
-                        ```html contenteditable data-show-source="examples/xss-rules/1.html"
-                        loading source...
-                        ```
-                    </section>
-
-                    <section data-markdown class="example_entities">
-                        # 2.
-                        HTML escape  
-                        dynamic data
-                        
-                        ```html contenteditable data-show-source="examples/xss-rules/2.html"
-                        loading source...
-                        ```
-
-                        <table>
-                            <tr><td class="first">&amp;</td>  <td>&rarr;</td> <td class="third">&amp;amp;</td></tr>
-                            <tr><td class="first">&lt;</td>   <td>&rarr;</td> <td class="third">&amp;lt;</td></tr>
-                            <tr><td class="first">&gt;</td>   <td>&rarr;</td> <td class="third">&amp;gt;</td></tr>
-                            <tr><td class="first">&quot;</td> <td>&rarr;</td> <td class="third">&amp;quot;</td></tr>
-                            <tr><td class="first">&apos;</td> <td>&rarr;</td> <td class="third">&amp;apos; / &amp;#39;</td></tr>
-                        </table>
-
-                    </section> 
-
-                    <section data-markdown data-state="jasmine">
-                        ## Testen?
-                        
-                        ```html contenteditable data-show-source="examples/jasmine-demo/saveFormat.js"
-                        loading source...
-                        ```
-                    </section>
-                    
-                    <section data-markdown data-state="jasmine">
-                        ## Testen!
-                        
-                        ```html contenteditable data-show-source="examples/jasmine-demo/saveFormat.spec.js"
-                        loading source...
-                        ```
-                    </section>
-                       
-                    <section data-markdown data-state="jasmine">
-                        ## Test
-
-                        <iframe src="examples/jasmine-demo/SpecRunner.html" class="spec" scrolling="no"></iframe>
-                        
-                        <small>[&raquo; Demo](examples/jasmine-demo/SpecRunner.html)</small>
-                    </section>
-
-                    <section data-markdown data-state="jasmine">
-                        ## Moment...
-                        
-                        ```html contenteditable data-show-source="examples/jasmine-demo2/saveFormat.spec.js"
-                        loading source...
-                        ```
-                    </section>
-                    
-                    <section data-markdown data-state="jasmine">
-                        ## Richtig testen!
-
-                        <iframe src="examples/jasmine-demo2/SpecRunner.html" class="spec" scrolling="no"></iframe>
-                        
-                        <small>[&raquo; Demo](examples/jasmine-demo2/SpecRunner.html)</small>
-                    </section>
-                    
-                    <section data-markdown class="example_entities">
-                        # 3.
-                        Attribute escape  
-                        dynamic data
-                        
-                        ```html contenteditable data-show-source="examples/xss-rules/3.html"
-                        loading source...
-                        ```
-                        
-                        <table>
-                            <tr><td class="first">a-z A-Z 0-9</td>  <td>&rarr;</td> <td class="third">immun</td></tr>
-                            <tr><td class="first">, . - _</td>      <td>&rarr;</td> <td class="third">immun</td></tr>
-                            <tr><td class="first">Rest</td>         <td>&rarr;</td> <td class="third">&#xHH;</td></tr>
-                        </table>
-                    </section>
-                    
-                    <section data-markdown>
-                        # 4. DO NOT
-                        JavaScript escape  
-                        dynamic data 
-                          
-                        <br />  
-                        <ul style="font-size:0.8em;">
-                            <li class="fragment">HTML parser runs before the JavaScript parser!</li>
-                            <li class="fragment">you are doing it wrong</li>
-                        </ul>
-                    </section>    
-                    
-                    <section data-markdown>
-                        ## Das hier ist Alltag  
-                        <small>UserList.cshtml / Kendo UI Template</small>
-
-                        ```html contenteditable data-show-source="examples/xss-rules/4.html"
-                        loading source...
-                        ```
-                    </section>
-
-                    <section data-markdown>
-                        # ?
-                        
-                        Offensichtlich läuft beim Umgang  
-                        mit Daten etwas prinzipiell falsch!
-                    </section>
-                </section>   
-                
-                <section>
-                    
-                    <section data-markdown>
-                        # Storage
-                        
-                        ![tools](images/icon_storage.png)
-                    </section>
-                    
-                    <section data-markdown>
-                        ## Egal 
-                        
-                        <br />
-                        <ul style="margin-left: 120px;">
-                            <li class="fragment">ob Cookies</li>
-                            <li class="fragment">ob Session Storage</li>
-                            <li class="fragment">ob Local Storage</li>
-                            <li class="fragment">ob WebSQL</li>
-                        </ul>
-                        
-                        <br />
-
-                        die Daten sind nicht vertrauenswürdig!
-                    </section>
-                    
-                    <section>
-                        <h2 class="fragment">Resident XSS</h2>
-                        
-                        <table border style="margin:auto;">
-                            <tr>
-                                <td class="fragment"><img src="images/icon_storage.png" title="Daten aus einem Storage" /></td>
-                                <td class="fragment"><img src="images/icon_bug.png" title="XSS Schwachstelle" /></td>
-                            </tr>
-                        </table>   
-                        
-                        <small>richtig fies!</small>
-                    </section>
-
-                    <section data-markdown>
-                        Vertraulichen Informationen  
-                        gehören in die SERVER-Session!
-                    </section>
-                    
-                    <section data-markdown>
-                        Session Storage bevorzugen!
-                    </section>
-                    
-                    <section data-markdown>
-                        ## WebSQL
-                        
-                        <br />
-                        SQL Injection:
-                        ```html contenteditable
-                        executeSql("SELECT foo FROM bar WHERE value=" + value);
-                        ```
-                        
-                        <br />
-                        Prepared Statement:
-                        ```html contenteditable
-                        executeSql("SELECT foo FROM bar WHERE value=?", [value]);
-                        ```
-                    </section>
-
-                </section> 
-            
-                <section>
-                    
-                    <section data-markdown>
-                        ## Kommunikation
+                        ## MVVM
                         
                         ![tools](images/icon_communication.png)
                     </section>   
                     
-                    <section data-markdown class="example_jsonp">
-                        ## Mashups!
-                           
-                        ```html contenteditable data-show-source="examples/jsonp/loadTweets.js"
-                        loading source...
-                        ```
-
-                        <div data-insert-source="examples/jsonp/index.html" class="demo_twitter"></div>
+                    <section data-markdown>
+                        ### Model-View-View Model
+                               
+                        <ul class="model">
+                            <li class="fragment">
+                                <span>&nbsp;&nbsp; &nbsp; Model &nbsp; &nbsp; &nbsp;</span>
+                                <small>application’s stored data<br>(on server side, retrieved via AJAX)</small>
+                            </li>
+                            <li class="fragment">
+                                <span>View Model</span>
+                                <small>a pure-code representation of the data, with additional logic<br>(eg. exposes methods to add, remove or update items)
+                                </small>
+                            </li>
+                            <li class="fragment">
+                                <span>&nbsp;&nbsp; &nbsp; &nbsp; View &nbsp; &nbsp; &nbsp;&nbsp;</span>
+                                <small>all the GUI elements<br>(HTML with binding)</small>
+                            </li>
+                        </ul>
                     </section>
-                
-                    <section data-markdown>
-                        JSON
-                        ```html contenteditable    
-                        {"hello": "world"}
-                        ```
-                        
-                        <br>
-                        JSON with Padding                                                               
-                        ```html contenteditable data-show-source="examples/jsonp/jsonp_by_hand.html"
-                        loading source...
-                        ```
-                        ```html contenteditable
-                        foo({"hello": "world"});
-                        ```
-                        
-                        <small>[&raquo; Demo](examples/jsonp/jsonp_by_hand.html)</small>
-                    </section> 
-
-                    <section data-markdown>
-                        ![tools](images/codingHorror.png)
-
-                        ## &nbsp;JSONP
-                    </section> 
-                    
-                    <section data-markdown>
-                        ## SOP
-                        <small>Same origin policy &rarr; Not macht erfinderisch (JSONP)</small>
-                         
-                        <br/> 
-                        <div class="fragment">
-                            <h2>CORS</h2>
-                            <small>Cross-Origin Resource Sharing &rarr; Access-Control-Allow-Origin: *</small>
-                        </div>
-                          
-                        <br/>
-                        <div class="fragment">
-                            <h2>WebSockets</h2>
-                            <small>do what you want</small>
-                        </div>
-                    </section>
-                     
-                    <section data-markdown>
-                        ![Attack & Defense Labs](images/attack_and_defense_labs.png) 
-                        
-                        <small>
-                            [JS-Recon](http://www.andlabs.org/tools/jsrecon/jsrecon.html)  
-                            [Shell of the Future](http://blog.andlabs.org/2010/07/shell-of-future-reverse-web-shell.html) 
-                        </small>
-                    </section>
-
-                    <section data-markdown>
-                        [![JS-RECON](images/js-recon.png)](http://www.andlabs.org/tools/jsrecon.html)
-                    </section> 
-                    
-                    <section data-markdown>
-                        ## Intranet == Internet
-                        ![Internet](images/icon_file.png)
-                    </section>
-            
-                </section> 
-               
-                <section data-markdown>
-                    # Danke!
-                </section> 
-                
-                <section data-markdown class="example_article">
-                    [![Artikel](images/hakin9.png)](http://blog.johanneshoppe.de/wp-content/uploads/2012/09/Sicherheit-von-Web-Anwendungen.pdf)
-                    <small style="margin-top: -70px;margin-right: 90px;">[&raquo; Sicherheit von Web-Anwendungen](http://blog.johanneshoppe.de/wp-content/uploads/2012/09/Sicherheit-von-Web-Anwendungen.pdf)</small>
                 </section>
 
+                <section data-markdown>
+                    # Danke!
+                    <small>weiter geht es am <b>11.06.2013</b></small>
+                </section> 
             </div>
 
         </div>
@@ -454,7 +121,7 @@
             <p>
                 Created by <a href="http://johanneshoppe.de" target="_blank">Johannes Hoppe</a>
                 <span class="hidePrint">| <a href="?print-pdf" tooltip="activates PDF print stylesheet" target="_blank">Print PDF</a></span>
-                <span class="hidePrint">| <a href="https://github.com/JohannesHoppe/HTML5Security" target="_blank">GitHub</a></span>
+                <span class="hidePrint">| <a href="https://github.com/JohannesHoppe/DeveloperMediaSlides" target="_blank">GitHub</a></span>
 
             </p>
                 
@@ -468,10 +135,8 @@
         <script src="js/require.config.js"></script>
         <script>
 
-            require(['jquery', 'cookie'], function ($, cookie) {
+            require(['jquery'], function ($) {
 
-                cookie.createCookie('secret', 'cookie value', 99);
-                
                 // some dirty fixes
                 $("code[fragment]").addClass("fragment");
                 $("code[small]").addClass("small");
@@ -483,8 +148,6 @@
                     }
                 });
             });
-            
-            require(['examples/jsonp/loadTweets.js']);
         </script>
 
         <script>

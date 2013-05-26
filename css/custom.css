@@ -47,19 +47,6 @@
 }
 */
 
-/*
-mustache {
-    display: block;
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
-    font-size: 2.5em;
-    font-weight: bold;
-}
-*/
-
 blockquote {
     margin-top: 40px !important;
     box-shadow: none;
@@ -87,7 +74,6 @@ red {
     color: brown;
 }
 
-/*
 ul.model {
     margin-top: 30px;
 }
@@ -104,16 +90,12 @@ ul.model span {
     box-shadow: rgba(0, 0, 0, 0.3) 0 2px 5px;
     
     margin: 7px;
-    background-color: #51483D;
+    background-color: #3aa9db;
     color: white;
     width: 300px;
 }
 
-ul.model.jasmine span {
-    background-color: #9CD175;
-}
-*/
-
+/*
 .reveal .state-background {
     background-image: url('../images/pixel.png');
     background-repeat: no-repeat;
@@ -129,6 +111,7 @@ ul.model.jasmine span {
     -o-transition: background-image 0.8s linear;
     transition: background-image 0.8s linear;
 }
+*/
 
 code.small {
     font-size: 14px;
@@ -143,108 +126,6 @@ iframe.spec {
     border: 1px solid silver;
     box-shadow: #000000 0 2px 5px;
     box-shadow: rgba(0, 0, 0, 0.3) 0 2px 5px;
-}
-
-/* example: formaction */
-.example_formaction form {
-    font-size: 0.8em;
-    padding: 20px;
-    text-align: right;
-    margin-right: 27%;
-    white-space: pre-line;
-    margin-top: -2em;
-}
-
-.example_formaction input {
-    font-size: 0.8em;
-    padding: 5px;
-}
-
-.example_formaction button {
-    font-size: 0.6em;
-}
-
-.example_formaction input[type=text],
-.example_formaction input[type=password] {
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    border: 1px solid gray;
-}
-
-.example_formaction input[type=submit],
-.example_formaction button {
-    font-weight: bold;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    border: 1px solid gray;
-}
-
-.example_entities table {
-   margin:auto;
-   font-size: 0.8em;
-}
-
-.example_entities table td.first {
-   font-weight: bold; 
-}
-
-.example_entities table td.third {
-   font-size: 0.8em; 
-}
-
-.example_jsonp ul {
-    width: 500px;
-}
-
-.example_jsonp ul li {
-    clear: both;
-    padding: 20px 0 0 0;
-    border-top: 1px solid white;
-}
-
-.example_jsonp .demo_twitter {
-    margin: auto;
-    width: 600px;
-    height: 400px;
-     overflow-x: auto ;
-     overflow-y: scroll;
-}                           
-
-.example_jsonp ul div {
-    clear: both;
-}
-
-.example_jsonp ul div {
-    display: block;
-    width: 425px;
-    float: right;
-    margin-bottom: 10px;
-}
-
-.example_jsonp ul h1 {
-    font-size: 0.5em;
-    display: block;
-    width: 300px;
-    margin: 0;
-    margin-bottom: 3px;
-}
-
-.example_jsonp ul small {
-    font-size: 0.5em;
-}
-
-.example_jsonp ul img {
-    float: left;
-    width: 50px; 
-    margin: 0;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-
-.example_article img {
-    margin-left: 25% !important;
 }
 
 /* ReSharper restore UnknownHtmlTag */

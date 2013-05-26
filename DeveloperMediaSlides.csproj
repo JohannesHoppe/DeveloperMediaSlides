@@ -50,7 +50,7 @@
     <Content Include="css\theme\serif.css" />
     <Content Include="css\theme\simple.css" />
     <Content Include="css\theme\sky.css" />
-    <Content Include="css\theme\yellowJS.css" />
+    <Content Include="css\theme\developerMedia.css" />
     <Content Include="examples\jasmine-demo2\saveFormat.js" />
     <Content Include="examples\jasmine-demo2\saveFormat.spec.js" />
     <Content Include="examples\jasmine-demo2\SpecRunner.html" />
@@ -173,7 +173,7 @@
     <None Include="css\theme\source\serif.scss" />
     <None Include="css\theme\source\simple.scss" />
     <None Include="css\theme\source\sky.scss" />
-    <Content Include="css\theme\source\yellowJS.scss" />
+    <Content Include="css\theme\source\developerMedia.scss" />
     <None Include="css\theme\template\mixins.scss" />
     <None Include="css\theme\template\settings.scss" />
     <None Include="css\theme\template\theme.scss" />

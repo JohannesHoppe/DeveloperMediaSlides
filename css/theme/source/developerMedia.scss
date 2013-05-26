@@ -41,14 +41,14 @@
 
 // Override theme settings (see ../template/settings.scss)
 $mainFont: UbuntuLight, sans-serif;
-$mainColor: #000;
+$mainColor: #2a2b2c;
 
 $headingFont: UbuntuBold, sans-serif;
-$headingColor: #2e2e2c;
+$headingColor: #537078;
 $headingTextShadow: none;
 $headingTextTransform: none;
 
-$backgroundColor: #f3df49;
+$backgroundColor: white;
 
 $linkColor: #2e2e2c;
 $linkColorHover: lighten( $linkColor, 20% );
@@ -56,8 +56,8 @@ $selectionBackgroundColor: #26351C;
 
 
 // Background generator
-//@mixin bodyBackground() {
-//    @include radial-gradient(#fede19, #ede6c0);
+// @mixin bodyBackground() {
+//    @include radial-gradient(#8bb2bc, #FFFFFF);
 //}
 
 em, em * {
