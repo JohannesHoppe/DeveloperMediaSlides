@@ -55,7 +55,6 @@
     <Content Include="images\icon_bug.png" />
     <Content Include="images\icon_communication.png" />
     <Content Include="images\icon_file.png" />
-    <Content Include="images\icon_mustache.png" />
     <Content Include="images\icon_storage.png" />
     <Content Include="images\icon_tool.png" />
     <Content Include="images\jasmine_logo_bg.png" />
