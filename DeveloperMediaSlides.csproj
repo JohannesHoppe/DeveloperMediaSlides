@@ -52,12 +52,14 @@
     <Content Include="css\theme\sky.css" />
     <Content Include="css\theme\developerMedia.css" />
     <Content Include="images\favicon.ico" />
+    <Content Include="images\icon.png" />
     <Content Include="images\icon_bug.png" />
     <Content Include="images\icon_communication.png" />
     <Content Include="images\icon_file.png" />
     <Content Include="images\icon_storage.png" />
     <Content Include="images\icon_tool.png" />
     <Content Include="images\jasmine_logo_bg.png" />
+    <Content Include="images\johannes.png" />
     <Content Include="images\logo.png" />
     <Content Include="images\logo_big.png" />
     <Content Include="images\pixel.png" />
