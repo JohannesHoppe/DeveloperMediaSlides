@@ -1,5 +1,5 @@
 ## Permalink: http://bit.ly/devMedia
-![Logo](https://raw.github.com/JohannesHoppe/DeveloperMediaSlides/master/images/logo_big.png)
+![Logo](https://raw.github.com/JohannesHoppe/DeveloperMediaSlides/master/images/logo_big_plain.png)
 
 ## Developer Media Slides
  

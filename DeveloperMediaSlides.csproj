@@ -64,6 +64,8 @@
     <Content Include="images\logo_big.png" />
     <Content Include="images\pixel.png" />
     <Content Include="index.html" />
+    <Content Include="index_knockoutjs.html" />
+    <Content Include="index_webapi.html" />
     <Content Include="js\cookie.js" />
     <Content Include="js\domReady.js" />
     <Content Include="js\jquery-1.9.1.js" />
