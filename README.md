@@ -1,3 +1,6 @@
+## Permalink: http://bit.ly/devMedia
+![Logo](https://raw.github.com/JohannesHoppe/DeveloperMediaSlides/master/images/logo_big.png)
+
 ## Developer Media Slides
  
 #### [Knockout.js für .NET Entwickler](http://johanneshoppe.github.com/DeveloperMediaSlides/index_knockoutjs.html)  
@@ -16,7 +19,6 @@
 * 19.09.2013
 * 02.10.2013
 
-![Logo](https://raw.github.com/JohannesHoppe/DeveloperMediaSlides/master/images/logo_big.png)
 
 
 ## MIT License
