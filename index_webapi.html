@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
 
-        <title>Webinar: Knockout.js</title>
+        <title>Webinar: Web API</title>
 
         <meta name="description" content="DeveloperMediaSlides">
         <meta name="author" content="Johannes Hoppe">
@@ -96,6 +96,109 @@
                         * [&raquo; Visual Studio 2013 Preview](http://www.microsoft.com/visualstudio/eng/2013-downloads)
                         * [&raquo; Fiddler](http://fiddler2.com/)
                     </section>
+                </section>
+
+
+                <section>
+                    <section data-markdown>
+                        ## API-Anti Patterns
+                        
+                        ![tools](images/icon_bug.png)
+                    </section>
+                    
+                    <section data-markdown>
+                        ## API-Anti Patterns
+                        <br/>
+                        
+                        <ul>
+                            <li class="fragment">zu viel <b>GET</b> <span class="fragment">und <b>POST</b></span></li>
+                            <li class="fragment">POST: post.php?get=parameter</li>
+                            <li class="fragment">DELETE</li>
+                            <li class="fragment">HTTP/1.1 200 (OK) <span class="fragment">mit einer Fehlermeldung</span></li>
+                            <li class="fragment">HTTP/1.1 500 Internal Server Error</li>
+                            <li class="fragment">kein hypermedia<span class="fragment">?</span></li>
+                            <li class="fragment">schlechte Dokumentation</li>
+                        </ul>
+                         
+                        [old Twitter](https://dev.twitter.com/docs/api/1)
+                    </section>   
+                </section>
+                
+                <section>
+                    <section data-markdown>
+                        # RESTful
+                        
+                        ![tools](images/icon_communication.png)
+                    </section>
+                    
+                    <section data-markdown>
+                        ## Level 0: Pox
+                        <small>Richardson Maturity Model</small>
+
+                        <img src="images/hypermedia0.png" width="50%" />
+                    </section>      
+                    
+                    <section data-markdown>
+                        ## Level 0: Pox
+                        
+                        ```html contenteditable
+                        HTTP/1.1 200 OK
+                        Content-Type: application/soap+xml; charset=utf-8
+                        _LT_?xml version="1.0"?_GT_
+                        _LT_soap:Envelope
+                        xmlns:soap="http://www.w3.org/2001/12/soap-envelope"
+                        soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding"_GT_
+
+                        _LT_soap:Body xmlns:m="http://www.example.org/stock"_GT_
+                          _LT_m:GetStockPriceResponse_GT_
+                            _LT_m:Price_GT_34.5_LT_/m:Price_GT_
+                          _LT_/m:GetStockPriceResponse_GT_
+                        _LT_/soap:Body_GT_
+
+                        _LT_/soap:Envelope_GT_
+                        ```
+                    </section>      
+
+                    <section data-markdown>
+                        ## Level 1: Uri
+
+                        <img src="images/hypermedia1.png" width="50%" />
+                    </section>
+
+                    <section data-markdown contenteditable>
+                        ## Level 1: Uri
+
+                        ```txt
+                        GET /Home/GetAllNotes?limit=200_AMP_search=test
+                        ```
+                    </section>
+
+                    <section  data-markdown>
+                        ## Level 2: http
+                        <small>verbs &amp; status codes</small>
+                        
+                        <img src="images/hypermedia2.png" width="50%" />
+                    </section>    
+                 
+                    <section  data-markdown>
+                        ## Level 2: http
+                        <small>verbs &amp; status codes</small>
+
+                        ```txt
+                        GET
+                        PUT
+                        POST
+                        DELETE 
+                        ```
+                    </section>     
+
+                    <section  data-markdown>
+                        ## Level 3: hypermedia
+                        <small><b>H</b>ypermedia <b>A</b>s <b>T</b>he <b>E</b>ngine <b>Of</b> <b>A</b>pplication <b>S</b>tate</small>
+                                        
+                        <img src="images/hypermedia3.png" width="50%" />
+                    </section> 
+
                 </section>
                 
                 <section>
