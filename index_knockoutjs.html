@@ -189,29 +189,12 @@
             </p>
                 
         </div>
+                 
+        <script src="js/require.js"></script> 
+        <script src="js/require.config.js"></script>
 
         <script src="lib/js/head.min.js"></script>
         <script src="js/reveal.min.js"></script> 
-                             
-        <script src="js/jquery-1.9.1.min.js"></script>
-        <script src="js/require.js"></script> 
-        <script src="js/require.config.js"></script>
-        <script>
-
-            require(['jquery'], function ($) {
-
-                // some dirty fixes
-                $("code[fragment]").addClass("fragment");
-                $("code[small]").addClass("small");
-                
-                // start print page if print-pdf link was clicked
-                $(function () {
-                    if (window.location.search.match(/print-pdf/gi)) {
-                        window.print();
-                    }
-                });
-            });
-        </script>
 
         <script>
 
