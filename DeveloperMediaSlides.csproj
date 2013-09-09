@@ -39,6 +39,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="examples\01_getElementsByClassName.html" />
+    <Content Include="examples\02_getElementsByClassName2.html" />
+    <Content Include="examples\03_getElementsByClassName3.html" />
+    <Content Include="index_jQuery.html" />
     <Content Include="css\custom.css" />
     <Content Include="css\print\paper.css" />
     <Content Include="css\print\pdf.css" />
@@ -85,6 +89,8 @@
     <Content Include="js\reveal.min.js">
       <DependentUpon>reveal.js</DependentUpon>
     </Content>
+    <Content Include="lib\css\default.css" />
+    <Content Include="lib\css\github.css" />
     <Content Include="plugin\showSource\showSource.js" />
     <Content Include="lib\css\zenburn.css" />
     <Content Include="lib\font\league_gothic-webfont.svg" />
