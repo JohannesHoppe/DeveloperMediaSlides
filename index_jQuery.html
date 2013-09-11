@@ -112,10 +112,10 @@
                     </section>       
 
                     <section data-markdown>
-                        ### getElementsByClassName  
+                        <img src="images/internet_explorer.png" width="25%" style=""/>      
 
                         ```html contenteditable data-show-source="examples/02_getElementsByClassName2.html"
-                        loading source...
+                             loading source...
                         ```
                         
                         <small>[&raquo; Demo](examples/02_getElementsByClassName2.html)</small>
@@ -129,7 +129,67 @@
                         ```
                         
                         <small>[&raquo; Demo](examples/03_getElementsByClassName3.html)</small>
-                    </section>
+                    </section> 
+                    
+                    <section data-markdown>
+                        ## jQuery core
+
+                        <ul>
+                            <li class="fragment">DOM manipulation<span class="fragment" style="margin-left: 20px; color:green; font-size: 2em;">&#10003;</span></li>
+                            <li class="fragment">event handling<span class="fragment" style="margin-left: 20px; color:green; font-size: 2em;">&#10003;</span></li>
+                            <li class="fragment">animations
+                            <li class="fragment">AJAX<span class="fragment" style="margin-left: 20px; color:green; font-size: 2em;">&#10003;</span></li>
+                            <li class="fragment">plugins<span class="fragment" style="margin-left: 20px; color:orange; font-size: 2em;">&#10003;<small style="font-size: 0.3em;">(next webinar)</small></span></li>
+                        </ul>
+                    </section>        
+                    
+                    <section data-markdown>
+                        ## The jQuery way
+
+                        1. **Select** some HTML <small>(Sizzle Selector Engine)</small>
+                        2. Do something with it
+                    </section>      
+                                  
+                    
+                    <section data-markdown>
+                        <img src="images/sizzel_logo.png" width="25%" style=""/>
+
+                        ```js fragment
+                        $("#myId")       // selects (one) element with the id "myId" 
+                        $(".myClass")    // selects all elements with the class name "myClass"
+                        $("div")         // selects all elements of type "div"
+                        $("div:first")   // selects the first element of type "div"
+                        $("div:odd")     // selects odd "div" elements, zero-indexed
+                        $("input:not(:checked)") // equals to
+                        $("input").not(":checked")
+                        ```
+                    </section>              
+                    
+                    <section data-markdown>
+                        ### Selector Performance
+                           
+                        <ul>
+                            <li class="fragment">Use IDs where possible</li>
+                            <li class="fragment">Avoid selecting by class only</li>
+                            <li class="fragment">KISS</li>
+                            <li class="fragment">Increase Specificity from Left to Right</li>
+                            <li class="fragment"><b>Avoid touching the DOM</b></li>
+                        </ul>
+                    </section>    
+                    
+                    <section data-markdown>
+                        ### Do something with it
+
+                        <ul>
+                            <li class="fragment"><a href="http://api.jquery.com/category/manipulation/">Manipulation of elements</a></li>
+                            <li class="fragment"><a href="http://api.jquery.com/category/attributes/">Change of element attributes</a></li>
+                            <li class="fragment"><a href="http://api.jquery.com/category/traversing/">Traversing</a></li>
+                            <li class="fragment"><a href="http://api.jquery.com/category/events/">Events</a></li>
+                            <li class="fragment"><a href="http://api.jquery.com/category/effects/">Effects</a></li>
+                            <li class="fragment"><a href="http://api.jquery.com/category/ajax/">AJAX</a></li>
+                        </ul>
+                    </section>  
+
                 </section>                  
                 
                 <section>
