@@ -115,7 +115,7 @@
                         <img src="images/internet_explorer.png" width="25%" style=""/>      
 
                         ```html contenteditable data-show-source="examples/02_getElementsByClassName2.html"
-                             loading source...
+                        loading source...
                         ```
                         
                         <small>[&raquo; Demo](examples/02_getElementsByClassName2.html)</small>
@@ -190,7 +190,113 @@
                         </ul>
                     </section>  
 
-                </section>                  
+                    <section data-markdown>
+                        ### Example
+
+                        ```html contenteditable data-show-source="examples/04_jQuery_object.html"
+                        loading source...
+                        ```
+                        
+                        <small>[&raquo; Demo](examples/04_jQuery_object.html)</small>
+                    </section> 
+
+                </section>
+                
+                <section>
+                    
+                    <section data-markdown>
+                        ## Event Model
+                        
+                        ![tools](images/icon_flash.png)
+                    </section>
+                                           
+                    <section data-markdown>
+                        DOM Level 3 Event Model
+                        
+                        ![W3C: level 3 event](images/events_dom.png)
+                    </section>  
+                    
+                    <section data-markdown>
+                        DOM Level 3 Event Model
+                                  
+                        ```js
+                        document.getElementsByTagName('a')[0]
+                            .addEventListener("click", function() {
+                                alert(this.text);
+                        });
+                        ```
+                    </section>  
+                    
+                    <section data-markdown>
+                        jQuery Event Model
+                        
+                        ![jQuery Event Model](images/events_jquery.png)
+                    </section>
+                    
+                    <section data-markdown>
+                        jQuery Event Model
+
+                        <a style="font-size: 0.5em">Demo Link</a>
+
+                        ```js fragment
+                        $('a').on('click', function() {
+                            alert(this.text);
+                        });
+                        ```
+                        ```js fragment
+                        $('a').click(function() {
+                            alert(this.text);
+                        });
+                        ```
+                    </section>
+                           
+                    <section data-markdown>
+                        ### Some Ajax
+                        
+                        ```js
+                        $(function() {
+                            $('#example').dataTable({
+                                sAjaxSource: "/api/Note/"
+                            });
+                        });
+                        ```
+                    </section>  
+
+                    <section data-markdown>
+                        ### First try
+                        
+                        ```js
+                        $(function() {
+                            $('td').click(function() {
+                                alert($(this).text());
+                            });
+                        });
+                        ```                        
+                    </section>                     
+
+                    <section data-markdown>
+                        ### Delegated events
+                        
+                        ```js
+                        $(function() {
+                            $('table').on('click', 'td', function() {
+                                alert($(this).text());
+                            });
+                        });
+                        ```                        
+                    </section>
+
+                    <section data-markdown>
+                        ### API changes!
+                        
+                        ```js fragment
+                        $(selector).live(events, data, handler);               // jQuery 1.3+
+                        $(document).delegate(selector, events, data, handler); // jQuery 1.4.3+
+                        $(document).on(events, selector, data, handler);       // jQuery 1.7+
+                        ```                        
+                    </section> 
+                   
+                </section>
                 
                 <section>
                     
@@ -205,8 +311,13 @@
                 </section>
                    
                 <section data-markdown>
-                    # 12.09.
-                    [Webinar: jQuery 2013 - Teil 1](http://developer-media.de/portfolioentry/jquery-2013-teil-1/)
+                    ## 26.09.
+                    [Webinar: jQuery 2013 - Teil 2](http://developer-media.de/portfolioentry/jquery-2013-teil-2/)        
+                     
+                    <br/>
+
+                    ## 19.09.
+                    [Webinar: require.js & modulares JS - Teil 1](http://developer-media.de/portfolioentry/require-js-prinzipien-fur-modulares-javascript/)
                 </section> 
 
 
