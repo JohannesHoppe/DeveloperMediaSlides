@@ -36,6 +36,18 @@
 
     <body>
 
+        <div class="content" style="display: none; position: absolute; top: 20; left: 30; z-index: 9999";>
+            <p>Parapgraph 1</p>
+            <p>Parapgraph 2</p>
+            <p>Parapgraph 3</p>
+        </div>
+        
+        <div id="myId" class="myClass" style="display: none;">
+            <p>Parapgraph 1</p>
+            <p>Parapgraph 2</p>
+            <p>Parapgraph 3</p>
+        </div>
+
         <div class="reveal">
 
             <!-- Any section element inside of this container is displayed as a slide -->
@@ -129,7 +141,15 @@
                         ```
                         
                         <small class="mini">[&raquo; Demo](examples/03_getElementsByClassName3.html)</small>
-                    </section> 
+                    </section>      
+                    
+                    
+                    <section data-markdown>
+                        ## The jQuery way
+
+                        1. **Select** some HTML <small>(Sizzle Selector Engine)</small>
+                        2. Do something with it
+                    </section>      
                     
                     <section data-markdown>
                         ## jQuery core
@@ -142,13 +162,7 @@
                             <li class="fragment">plugins<span class="fragment" style="margin-left: 20px; color:orange; font-size: 2em;">&#10003;<small style="font-size: 0.3em;">(next webinar)</small></span></li>
                         </ul>
                     </section>        
-                    
-                    <section data-markdown>
-                        ## The jQuery way
 
-                        1. **Select** some HTML <small>(Sizzle Selector Engine)</small>
-                        2. Do something with it
-                    </section>      
                                   
                     
                     <section data-markdown>
@@ -219,7 +233,7 @@
                     <section data-markdown>
                         DOM Level 3 Event Model
                                   
-                        ```js
+                        ```js contenteditable
                         document.getElementsByTagName('a')[0]
                             .addEventListener("click", function() {
                                 alert(this.text);
@@ -238,7 +252,7 @@
 
                         <a style="font-size: 0.5em">Demo Link</a>
 
-                        ```js fragment
+                        ```js fragment contenteditable
                         $('a').on('click', function() {
                             alert(this.text);
                         });
@@ -253,7 +267,7 @@
                     <section data-markdown>
                         ### Some Ajax
                         
-                        ```js
+                        ```js contenteditable
                         $(function() {
                             $('#example').dataTable({
                                 sAjaxSource: "/api/Note/"
@@ -265,7 +279,7 @@
                     <section data-markdown>
                         ### First try
                         
-                        ```js
+                        ```js contenteditable
                         $(function() {
                             $('td').click(function() {
                                 alert($(this).text());
@@ -277,7 +291,7 @@
                     <section data-markdown>
                         ### Delegated events
                         
-                        ```js
+                        ```js contenteditable
                         $(function() {
                             $('table').on('click', 'td', function() {
                                 alert($(this).text());
@@ -289,7 +303,7 @@
                     <section data-markdown>
                         ### API changes!
                         
-                        ```js fragment
+                        ```js fragment contenteditable
                         $(selector).live(events, data, handler);               // jQuery 1.3+
                         $(document).delegate(selector, events, data, handler); // jQuery 1.4.3+
                         $(document).on(events, selector, data, handler);       // jQuery 1.7+
@@ -309,7 +323,7 @@
                     <section data-markdown>
                         ### before jQuery 1.5
                         
-                        ```js fragment
+                        ```js fragment contenteditable
                         $.ajax({
                             url: "/examples/webinar.json",
                             success: function(result) {
@@ -324,7 +338,7 @@
                     <section data-markdown>
                         ### Deferred object
                         
-                        ```js fragment
+                        ```js fragment contenteditable
                         $.ajax("/examples/webinar.json")
                         .done(function(result) {
                             $.each(result, function(i, value) {
@@ -337,7 +351,7 @@
                     <section data-markdown>
                         ### Deferred object - Promisses
                         
-                        ```js fragment
+                        ```js fragment contenteditable
                         $.when(
                             $.ajax("/examples/webinar.json"),
                             $.ajax("/examples/webinar.json"))
