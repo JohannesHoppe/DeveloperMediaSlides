@@ -108,7 +108,7 @@
                         loading source...
                         ```
                         
-                        <small>[&raquo; Demo](examples/01_getElementsByClassName.html)</small>
+                        <small class="mini">[&raquo; Demo](examples/01_getElementsByClassName.html)</small>
                     </section>       
 
                     <section data-markdown>
@@ -118,7 +118,7 @@
                         loading source...
                         ```
                         
-                        <small>[&raquo; Demo](examples/02_getElementsByClassName2.html)</small>
+                        <small class="mini">[&raquo; Demo](examples/02_getElementsByClassName2.html)</small>
                     </section> 
                     
                     <section data-markdown>
@@ -128,7 +128,7 @@
                         loading source...
                         ```
                         
-                        <small>[&raquo; Demo](examples/03_getElementsByClassName3.html)</small>
+                        <small class="mini">[&raquo; Demo](examples/03_getElementsByClassName3.html)</small>
                     </section> 
                     
                     <section data-markdown>
@@ -197,7 +197,7 @@
                         loading source...
                         ```
                         
-                        <small>[&raquo; Demo](examples/04_jQuery_object.html)</small>
+                        <small class="mini">[&raquo; Demo](examples/04_jQuery_object.html)</small>
                     </section> 
 
                 </section>
@@ -301,10 +301,135 @@
                 <section>
                     
                     <section data-markdown>
+                        ## Asynchronous Communication
+                        
+                        ![tools](images/icon_communication.png)
+                    </section>  
+                    
+                    <section data-markdown>
+                        ### before jQuery 1.5
+                        
+                        ```js fragment
+                        $.ajax({
+                            url: "/examples/webinar.json",
+                            success: function(result) {
+                                $.each(result, function(index, value) {
+                                  console.log(value.Title);
+                                });
+                            }
+                        });
+                        ```                        
+                    </section>
+                    
+                    <section data-markdown>
+                        ### Deferred object
+                        
+                        ```js fragment
+                        $.ajax("/examples/webinar.json")
+                        .done(function(result) {
+                            $.each(result, function(i, value) {
+                                console.log(value.Title);
+                            });
+                        });
+                        ```                        
+                    </section>
+                    
+                    <section data-markdown>
+                        ### Deferred object - Promisses
+                        
+                        ```js fragment
+                        $.when(
+                            $.ajax("/examples/webinar.json"),
+                            $.ajax("/examples/webinar.json"))
+                        .done(function(result1, result2) {
+                            var bothResults =  result1[0].concat(result2[0]);
+                            $.each(bothResults, function(i, value) {
+                                console.log(value.Title);
+                            });
+                        });
+                        ```
+                    </section>
+                </section>
+
+                <section>
+                    
+                    <section data-markdown>
+                        ## Best Practices
+                        
+                        ![tools](images/icon_mustache.png)
+                    </section> 
+                    
+                    <section data-markdown>
+                        ## Modul loaders
+                        <small>use AMD (require.js)</small>
+                        
+                        ```js contenteditable fragment
+                        define('myFirstModule', ['jquery'], function() {
+                        
+                            return {
+                                saySomething : function() { alert("hello!"); }
+                            }
+                        });
+                        
+                        require(['myFirstModule'], function(t) {
+                            t.saySomething();
+                        });
+                        ```
+                    </section>
+
+                    <section data-markdown>
+                        ## Own Events
+                        <small>Publish/Subscribe Pattern</small>
+                        
+                        ```js contenteditable fragment
+                        var $events = $({});
+                        
+                        $events.bind('somethingHappens', function() {
+                            alert("Something happened!");
+                        });
+                        
+                        $events.trigger('somethingHappens');
+                        ```
+                    </section> 
+                    
+                    <section data-markdown>
+                        ## jasmine-jquery
+                        <small>[custom matchers](https://github.com/velesin/jasmine-jquery#jquery-matchers), HTML/style/JSON fixtures, event spies and all the love!</small>
+                        
+                        ```javascript contenteditable
+                        describe('my jQuery plugin', function () {
+
+                           beforeEach(function() {
+                               jasmine.getFixtures().fixturesPath='examples/05_jasmine';
+                               jasmine.getFixtures().load('jquery.myPlugin.spec.html');
+                           });
+
+                           it('should do something', function() {
+                        
+                               var $div = $('#helloWorld').myPlugin();
+                               expect($div).toHaveClass("newClass");
+                           });
+                        });
+                        jasmine.getEnv().execute();
+                        ```
+                        <small class="mini">[&raquo; Demo](examples/05_jasmine/SpecRunner.html)</small>
+                    </section>
+                                    
+                    <section data-markdown>
+                        ## ASP.NET MVC
+                        #### Bundling and Minification
+                    </section>
+
+                </section>
+
+                <section>
+                    
+                    <section data-markdown>
                         ## Downloads
                         
                         ![tools](images/icon_file.png)
-                        
+
+                        ### [bit.ly/devMedia](http://bit.ly/devMedia)                        
                         ### [bit.ly/devMediaCode](http://bit.ly/devMediaCode)
                     </section> 
                    
