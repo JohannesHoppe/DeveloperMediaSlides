@@ -40,7 +40,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="images\icon_calendar.png" />
+    <Content Include="images\icon_calendar_orange.png" />
     <Content Include="images\icon_repeat.png" />
+    <Content Include="images\icon_repeat_orange.png" />
     <Content Include="index_require.js.html" />
     <Content Include="examples\01_getElementsByClassName.html" />
     <Content Include="examples\02_getElementsByClassName2.html" />
