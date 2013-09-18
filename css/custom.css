@@ -95,7 +95,6 @@ ul.model span {
     width: 300px;
 }
 
-/*
 .reveal .state-background {
     background-image: url('../images/pixel.png');
     background-repeat: no-repeat;
@@ -111,7 +110,6 @@ ul.model span {
     -o-transition: background-image 0.8s linear;
     transition: background-image 0.8s linear;
 }
-*/
 
 code.small {
     font-size: 14px;
