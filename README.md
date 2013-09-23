@@ -11,11 +11,11 @@
 * 13.08.2013
 * 27.08.2013
 
-#### jQuery 2013  
+#### [jQuery 2013 ](http://johanneshoppe.github.io/DeveloperMediaSlides/index_jQuery.html) 
 * 12.09.2013
 * 26.09.2013
 
-#### Require.js & Prinzipien für modulares JavaScript  
+#### [Require.js & Prinzipien für modulares JavaScript  ](http://johanneshoppe.github.io/DeveloperMediaSlides/index_require.js.html)
 * 19.09.2013
 * 02.10.2013
 
