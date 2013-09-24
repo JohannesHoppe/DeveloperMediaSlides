@@ -1,4 +1,4 @@
-﻿callback({[
+﻿callback([
    {
       "Id": 1,
       "Title": "Knockout.js für .NET Entwickler - Teil 1",
@@ -55,4 +55,4 @@
       "Added": "2013-10-02T00:00:00",
       "Categories":[]
    }
-]});
+]);
