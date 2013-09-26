@@ -1,3 +1,7 @@
-﻿var saveFormat = function () {
-    return "boo!";
-};
+﻿(function($){
+    
+    $.saveFormat = function () {
+        return "boo!";
+    };
+
+})(window.jQuery);

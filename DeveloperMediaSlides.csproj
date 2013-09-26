@@ -39,6 +39,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="images\bg_wiesn.png" />
     <Content Include="images\icon_calendar.png" />
     <Content Include="images\icon_calendar_orange.png" />
     <Content Include="images\icon_repeat.png" />
