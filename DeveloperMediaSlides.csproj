@@ -43,6 +43,7 @@
     <Content Include="images\icon_calendar_orange.png" />
     <Content Include="images\icon_repeat.png" />
     <Content Include="images\icon_repeat_orange.png" />
+    <Content Include="images\jasmine_logo.png" />
     <Content Include="index_require.js.html" />
     <Content Include="examples\01_getElementsByClassName.html" />
     <Content Include="examples\02_getElementsByClassName2.html" />
@@ -103,14 +104,44 @@
     <Content Include="index.html" />
     <Content Include="index_knockoutjs.html" />
     <Content Include="index_webapi.html" />
+    <Content Include="js\1_jasmine-demo_fail\saveFormat.js" />
+    <Content Include="js\1_jasmine-demo_fail\saveFormat.spec.js" />
+    <Content Include="js\1_jasmine-demo_fail\SpecRunner.html" />
+    <Content Include="js\2_jasmine-demo_pass\saveFormat.js" />
+    <Content Include="js\2_jasmine-demo_pass\saveFormat.spec.js" />
+    <Content Include="js\2_jasmine-demo_pass\SpecRunner.html" />
+    <Content Include="js\3_jasmine-demo_refactor\saveFormat.js" />
+    <Content Include="js\3_jasmine-demo_refactor\saveFormat.spec.js" />
+    <Content Include="js\3_jasmine-demo_refactor\SpecRunner.html" />
+    <Content Include="js\4_jasmine-demo_repeat\saveFormat.js" />
+    <Content Include="js\4_jasmine-demo_repeat\saveFormat.spec.js" />
+    <Content Include="js\4_jasmine-demo_repeat\SpecRunner.html" />
+    <Content Include="js\5_jasmine-demo_jquery\jquery.myPlugin.js" />
+    <Content Include="js\5_jasmine-demo_jquery\jquery.myPlugin.spec.html" />
+    <Content Include="js\5_jasmine-demo_jquery\jquery.myPlugin.spec.js" />
+    <Content Include="js\5_jasmine-demo_jquery\SpecRunner.html" />
+    <Content Include="js\6_jasmine-demo_spies\garfield.js" />
+    <Content Include="js\6_jasmine-demo_spies\garfield.spec.js" />
+    <Content Include="js\6_jasmine-demo_spies\SpecRunner.html" />
     <Content Include="js\domReady.js">
       <DependentUpon>require.js</DependentUpon>
     </Content>
     <Content Include="examples\jasmine\lib\jasmine-1.3.1\MIT.LICENSE" />
     <None Include="examples\webinar.json" />
+    <Content Include="js\jasmine\lib\jasmine-1.3.1\MIT.LICENSE" />
     <None Include="js\jquery-2.0.3.intellisense.js">
       <DependentUpon>jquery-2.0.3.js</DependentUpon>
     </None>
+    <Content Include="js\jasmine\lib\jasmine-1.3.1\jasmine-html.js" />
+    <Content Include="js\jasmine\lib\jasmine-1.3.1\jasmine.console_reporter.js" />
+    <Content Include="js\jasmine\lib\jasmine-1.3.1\jasmine.css" />
+    <Content Include="js\jasmine\lib\jasmine-1.3.1\jasmine.js" />
+    <Content Include="js\jasmine\lib\jasmine-jquery.js" />
+    <Content Include="js\jasmine\SpecRunner.html" />
+    <Content Include="js\jasmine\spec\PlayerSpec.js" />
+    <Content Include="js\jasmine\spec\SpecHelper.js" />
+    <Content Include="js\jasmine\src\Player.js" />
+    <Content Include="js\jasmine\src\Song.js" />
     <Content Include="js\jquery-2.0.3.js" />
     <Content Include="js\jquery-2.0.3.min.js">
       <DependentUpon>jquery-2.0.3.js</DependentUpon>
