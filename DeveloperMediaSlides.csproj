@@ -40,6 +40,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="images\bg_wiesn.png" />
+    <Content Include="images\cordova_bootstrap_knockout.png" />
+    <Content Include="images\cordova_jQueryMobile.png" />
+    <Content Include="images\cordova_KendoUiMobile.png" />
+    <Content Include="images\icon_apps.png" />
     <Content Include="images\icon_calendar.png" />
     <Content Include="images\icon_calendar_orange.png" />
     <Content Include="images\icon_repeat.png" />
