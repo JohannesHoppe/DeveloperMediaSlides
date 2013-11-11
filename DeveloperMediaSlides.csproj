@@ -39,6 +39,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="index_knockoutjs2.html" />
     <Content Include="images\bg_wiesn.png" />
     <Content Include="images\cordova_bootstrap_knockout.png" />
     <Content Include="images\cordova_jQueryMobile.png" />
