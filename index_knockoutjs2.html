@@ -21,7 +21,8 @@
         <link rel="stylesheet" href="css/custom.css">
 
         <!-- For syntax highlighting -->
-        <link rel="stylesheet" href="lib/css/zenburn.css">
+        <!--<link rel="stylesheet" href="lib/css/zenburn.css">-->   
+        <link href="lib/css/github.css" rel="stylesheet" />
 
         <!-- If the query includes 'print-pdf', use the PDF print sheet -->
         <script>
@@ -41,11 +42,14 @@
             <div class="slides">
 
                 <section>
-                    <img src="images/logo_big.png" width="75%" style=""/>
-                    <h1 class="nowrap" style="font-size: 2.5em;">&nbsp;Knockout.js</h1>
-                    <br />          
-                    <br />
+                    <img src="images/logo_big_plain.png" width="75%" style="opacity: 0.8"/>
+                    <h1 class="nowrap hidePrint" style="font-size: 2.5em;">&nbsp;Knockout</h1>
+                    <h1 class="nowrap showPrint" style="font-size: 1.8em;">&nbsp;Knockout</h1>
+                    <h4>& Prinzipien für modulares JavaScript</h4>
+                    <br class="hidePrint" />
+                    <br class="hidePrint" />
                     <small class="hidePrint">Navigation mit <span class="key">Esc</span>, <span class="key">→</span> und <span class="key">↓</span></small>
+                    <h4 class="showPrint"><a style="font-size: 0.5em;color:#E47A0D" href="http://johanneshoppe.github.io/DeveloperMediaSlides/index_require.js.html">bit.ly/devMedia - Interaktive Version der Präsentation!</a></h4>
                 </section>
                 
                 <section>
@@ -66,22 +70,21 @@
                     <section  data-markdown>
                         # Tools
                             
-                        * Visual Studio 2010/2012
-                        * [&raquo; JScript Editor Extensions](http://visualstudiogallery.msdn.microsoft.com/872d27ee-38c7-4a97-98dc-0d8a431cc2ed)
+                        * Visual Studio
                         * [&raquo; Resharper](http://www.jetbrains.com/resharper/whatsnew/#javascript)
-                        * [&raquo; JSHint](http://www.jshint.com/platforms/)
-                        * [&raquo; Chutzpah](http://chutzpah.codeplex.com/)
-                        * [&raquo; Firebug](https://getfirebug.com/) / F12
+                        * [&raquo; JSHint/JSLint](http://www.jshint.com/platforms/)
+                        * [Chrome DevTools](https://getfirebug.com/) → F12
                     </section>
-                </section>
-                
+                </section>              
+                 
                 <section>
                     
                     <section data-markdown>
-                        ## MVVM
+                        # Prinzipien
                         
-                        ![tools](images/icon_communication.png)
+                        ![tools](images/icon_mustache.png)
                     </section>   
+ 
                     
                     <section data-markdown>
                         ### Model-View-View Model
@@ -101,8 +104,68 @@
                                 <small>all the GUI elements<br>(HTML with binding)</small>
                             </li>
                         </ul>
+                    </section>                    
+                    
+                    <section data-markdown>
+                        ## Revealing Module Pattern 
+                        
+                        ```javascript contenteditable fragment
+                        var myModule = function () {
+
+                            var _name = "Johannes";
+
+                            function greetings() {
+                                console.log("Hello " + _name);
+                            }
+        
+                            function setName(name) {
+                                _name = name;
+                            }
+
+                            return {
+                                setName: setName,
+                                greetings: greetings
+                            };
+                        }();
+                        ```
+                        <small class="mini">[&raquo; Documentation](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#revealingmodulepatternjavascript)</small>
                     </section>
-                </section>
+                             
+                    <section data-markdown>
+                        ## Modul loaders
+                        <small>use AMD (require.js)</small>
+                        
+                        ```javascript contenteditable fragment
+                        define('test', ['jquery'], function() {
+                        
+                            return {
+                                saySomething : function() { alert("hello!"); }
+                            }
+                        });
+                        
+                        require(['test'], function(t) {
+                            t.saySomething();
+                        });
+                        ```
+                    </section>
+
+                    <section data-markdown>
+                        ## Events
+                        <small>Publish/Subscribe Pattern</small>
+                        
+                        ```javascript contenteditable
+                        var $events = $({});
+                        
+                        $events.bind('somethingHappens', function() {
+                            alert("Something happened!");
+                        });
+                        
+                        $events.trigger('somethingHappens');
+                        ```
+                    </section>                    
+                                       
+                </section>                                    
+
                 
                 <section>
                     
